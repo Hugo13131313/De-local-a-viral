@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DE LOCAL A VIRAL | Presencia Digital Flexible para Negocios Locales</title>
+    <meta name="description" content="Ayudo a negocios locales a atraer más clientes de su zona mediante soluciones independientes y sin packs obligatorios: redes sociales, diseño web y Google Maps.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#05070f',
+                            card: '#0c0f1d',
+                            accent: '#1e40af', // Blue
+                            electric: '#2563eb', // Electric Blue
+                            neon: '#3b82f6', // Light electric
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Premium Custom Styles -->
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #05070f;
+            overflow-x: hidden;
+        }
+        
+        /* Smooth glowing effects */
+        .glow-bg {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.12;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #05070f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+
+        /* Scroll reveal initial state */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover card border gradient effect */
+        .premium-card {
+            position: relative;
+            background: rgba(12, 15, 29, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .premium-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(37, 99, 235, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.2);
+        }
+    </style>
+</head>
+<body class="text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Glow Background Elements -->
+    <div class="glow-bg bg-blue-600 w-[500px] h-[500px] top-[-100px] left-[-100px]"></div>
+    <div class="glow-bg bg-indigo-600 w-[600px] h-[600px] top-[35%] right-[-150px]"></div>
+    <div class="glow-bg bg-blue-500 w-[400px] h-[400px] bottom-[15%] left-[-100px]"></div>
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo / Brand Name -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="Logo.png" alt="De Local a Viral Logo" class="w-10 h-10 object-contain rounded-xl shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-all duration-300" onerror="this.onerror=null; this.outerHTML='<div class=\'w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center font-extrabold text-white text-sm shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-all duration-300 shrink-0\'><i class=\'fa-solid fa-play text-[10px] mr-0.5\'></i>D</div>';">
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-white tracking-wide text-lg leading-none">DE LOCAL <span class="text-blue-500">A VIRAL</span></span>
+                    <span class="text-[9px] text-slate-400 tracking-widest mt-1 font-semibold uppercase">Estudio de Crecimiento Local</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#inicio" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Inicio</a>
+                <a href="#servicios" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Servicios</a>
+                <a href="#todo-conectado" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Ecosistema</a>
+                <a href="#sobre-mi" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Por qué yo</a>
+                <a href="#caso-exito" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Resultados</a>
+                <a href="#contacto" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contacto</a>
+            </nav>
+
+            <!-- CTA Desktop Button -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contacto" class="px-5 h-11 rounded-lg text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-all flex items-center justify-center shadow-lg shadow-blue-600/25 hover:shadow-blue-500/35 hover:-translate-y-0.5 active:translate-y-0">
+                    Atraer clientes a mi local
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 text-slate-300 hover:text-white focus:outline-none" aria-label="Abrir menú">
+                <span class="w-6 h-0.5 bg-current transition-all duration-300" id="hamburger-line1"></span>
+                <span class="w-6 h-0.5 bg-current transition-all duration-300" id="hamburger-line2"></span>
+                <span class="w-6 h-0.5 bg-current transition-all duration-300" id="hamburger-line3"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-brand-dark/95 border-b border-white/5 px-6 py-8 flex flex-col gap-6 backdrop-blur-lg">
+            <a href="#inicio" class="mobile-link text-lg font-medium text-slate-300 hover:text-white">Inicio</a>
+            <a href="#servicios" class="mobile-link text-lg font-medium text-slate-300 hover:text-white">Servicios</a>
+            <a href="#todo-conectado" class="mobile-link text-lg font-medium text-slate-300 hover:text-white">Ecosistema</a>
+            <a href="#sobre-mi" class="mobile-link text-lg font-medium text-slate-300 hover:text-white">Por qué yo</a>
+            <a href="#caso-exito" class="mobile-link text-lg font-medium text-slate-300 hover:text-white">Resultados</a>
+            <hr class="border-white/10 my-1">
+            <a href="#contacto" class="mobile-link w-full h-12 rounded-lg font-semibold bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center shadow-lg transition-all">
+                Quiero impulsar mi negocio
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-12 md:pt-44 md:pb-16 flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 text-center">
+            
+            <!-- Notice Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                Sin paquetes cerrados. Elige solo lo que tu negocio necesita hoy.
+            </div>
+
+            <!-- Big Main Headline -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight md:leading-[1.12]">
+                Cada día que tu negocio permanece invisible en internet, <span class="bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent">tus clientes potenciales se van con el de al lado.</span>
+            </h1>
+
+            <!-- Supporting Paragraph -->
+            <p class="mt-6 text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                Tus futuros clientes están en tu barrio buscando lo que ofreces, pero si tu marca no aparece de forma profesional, estás perdiendo oportunidades de facturación reales hoy mismo. Construyo una presencia digital flexible pensada exclusivamente para atraer visitas y reservas a tu establecimiento.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contacto" class="w-full sm:w-auto px-8 h-14 rounded-xl font-bold bg-blue-600 hover:bg-blue-500 text-white transition-all flex items-center justify-center gap-2 shadow-xl shadow-blue-600/30 hover:-translate-y-1 active:translate-y-0">
+                    <span>Quiero más clientes en mi local</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+                <a href="#servicios" class="w-full sm:w-auto px-8 h-14 rounded-xl font-bold bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2 hover:-translate-y-1 active:translate-y-0">
+                    <span>Ver soluciones individuales</span>
+                </a>
+            </div>
+            
+            <p class="text-xs text-slate-500 mt-4 font-semibold uppercase tracking-widest italic">
+                <span class="text-brand-neon font-bold">Empieza por el servicio que más necesites hoy.</span> Sin compromisos obligatorios.
+            </p>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Bloque de Resultados -->
+    <section class="py-12 bg-brand-card/30 border-t border-b border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Título de Contexto para las Estadísticas -->
+            <div class="text-center mb-8 reveal-element">
+                <span class="text-blue-500 font-bold uppercase tracking-widest text-[10px] sm:text-xs block mb-1">Impacto Demostrado</span>
+                <p class="text-sm sm:text-base text-slate-300 font-light">Lo que he conseguido con un único caso de éxito real:</p>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-center">
+                
+                <!-- Stat 1 -->
+                <div class="p-4 md:p-6 rounded-2xl bg-white/[0.01] border border-white/5 reveal-element">
+                    <span class="block text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">+70.000</span>
+                    <span class="block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-400 mt-2">Seguidores conseguidos</span>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="p-4 md:p-6 rounded-2xl bg-white/[0.01] border border-white/5 reveal-element" style="transition-delay: 0.1s">
+                    <span class="block text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">30 Millones</span>
+                    <span class="block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-400 mt-2">De reproducciones</span>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="p-4 md:p-6 rounded-2xl bg-white/[0.01] border border-white/5 reveal-element" style="transition-delay: 0.2s">
+                    <span class="block text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">15.000</span>
+                    <span class="block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-400 mt-2">Visitas a la web</span>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="p-4 md:p-6 rounded-2xl bg-white/[0.01] border border-white/5 reveal-element" style="transition-delay: 0.3s">
+                    <span class="block text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">+100</span>
+                    <span class="block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-400 mt-2">Pedidos directos</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (¿En qué te puedo ayudar?) -->
+    <section id="servicios" class="py-20 bg-brand-card/20 relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                <span class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-2 block">Soluciones Flexibles e Independientes</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">¿En qué aspecto de tu negocio necesitas ayuda hoy?</h2>
+                <p class="mt-3 text-slate-400 font-light text-sm sm:text-base">
+                    Cada negocio es diferente. Elige la herramienta digital que necesites en este momento con total libertad y flexibilidad.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Pillar 1: Redes -->
+                <div class="premium-card p-6 rounded-2xl reveal-element flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 text-base">
+                            <i class="fa-solid fa-clapperboard"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">🎥 Redes Sociales</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6 font-light">
+                            Haz que tu negocio sea descubierto por miles de vecinos de tu zona gracias a vídeos dinámicos de alto gancho visual.
+                        </p>
+                    </div>
+                    <div class="border-t border-white/5 pt-4">
+                        <button onclick="selectService('Redes Sociales')" class="text-xs text-blue-400 font-semibold hover:text-white transition-colors flex items-center gap-1.5 w-full text-left">
+                            <span>Quiero una propuesta</span>
+                            <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Web -->
+                <div class="premium-card p-6 rounded-2xl reveal-element flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 text-base">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">🌐 Página Web</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6 font-light">
+                            Convierte las visitas web en llamadas, reservas o ventas directas con un diseño rápido y 100% optimizado para móviles.
+                        </p>
+                    </div>
+                    <div class="border-t border-white/5 pt-4">
+                        <button onclick="selectService('Página Web')" class="text-xs text-blue-400 font-semibold hover:text-white transition-colors flex items-center gap-1.5 w-full text-left">
+                            <span>Quiero una propuesta</span>
+                            <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Google Business -->
+                <div class="premium-card p-6 rounded-2xl reveal-element flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 text-base">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">📍 Google Business</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6 font-light">
+                            Haz que te encuentren primero cuando busquen negocios como el tuyo cerca de ellos. Posicionamiento local puro.
+                        </p>
+                    </div>
+                    <div class="border-t border-white/5 pt-4">
+                        <button onclick="selectService('Google Business')" class="text-xs text-blue-400 font-semibold hover:text-white transition-colors flex items-center gap-1.5 w-full text-left">
+                            <span>Quiero una propuesta</span>
+                            <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pillar 4: Estrategia -->
+                <div class="premium-card p-6 rounded-2xl reveal-element flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 text-base">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">💡 Estrategia Digital</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-6 font-light">
+                            Trazamos un plan de acción real y adaptado a tus objetivos de venta locales, sin rodeos ni acciones vacías.
+                        </p>
+                    </div>
+                    <div class="border-t border-white/5 pt-4">
+                        <button onclick="selectService('Estrategia Digital')" class="text-xs text-blue-400 font-semibold hover:text-white transition-colors flex items-center gap-1.5 w-full text-left">
+                            <span>Más información</span>
+                            <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center reveal-element">
+                <p class="text-slate-400 text-xs sm:text-sm font-medium">
+                    <span class="text-brand-electric font-bold">No diseñamos soluciones estándar.</span> <span class="text-white font-bold">Empieza solo por la herramienta que más necesites</span> y acopla el resto del ecosistema cuando lo desees.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Todo Conectado -->
+    <section id="todo-conectado" class="py-20 border-b border-t border-white/5 relative">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                <span class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-2 block">El Ecosistema Completo</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Todo conectado: Cómo se multiplica tu inversión</h2>
+                <p class="mt-3 text-slate-400 font-light text-sm sm:text-base">
+                    Aunque cada servicio funciona perfectamente de forma independiente, al combinarlos creas un embudo automático que guía a los clientes a tu puerta.
+                </p>
+            </div>
+
+            <!-- Visual Flowchart Diagram Style -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative reveal-element">
+                
+                <!-- Connector Lines (Desktop only) -->
+                <div class="hidden md:block absolute top-[44px] left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-blue-500/20 via-blue-500 to-blue-500/20 z-0"></div>
+
+                <!-- Node 1: Visibilidad -->
+                <div class="p-6 rounded-2xl bg-[#0c0f1d] border border-white/5 flex flex-col items-center text-center relative z-10">
+                    <div class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-lg font-black mb-4 shadow-lg shadow-blue-500/25">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h4 class="font-extrabold text-white text-xs uppercase tracking-wider mb-2">1. Visibilidad</h4>
+                    <p class="text-[11px] text-slate-400 font-light leading-relaxed">
+                        Tus redes sociales y tu ficha en Google Maps atraen la atención de vecinos que no te conocen.
+                    </p>
+                </div>
+
+                <!-- Node 2: Confianza -->
+                <div class="p-6 rounded-2xl bg-[#0c0f1d] border border-white/5 flex flex-col items-center text-center relative z-10">
+                    <div class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-lg font-black mb-4 shadow-lg shadow-blue-500/25">
+                        <i class="fa-solid fa-image"></i>
+                    </div>
+                    <h4 class="font-extrabold text-white text-xs uppercase tracking-wider mb-2">2. Confianza</h4>
+                    <p class="text-[11px] text-slate-400 font-light leading-relaxed">
+                        La identidad visual de tus perfiles y un contenido visual de valor transmiten credibilidad e invitan a visitarte.
+                    </p>
+                </div>
+
+                <!-- Node 3: Conversión -->
+                <div class="p-6 rounded-2xl bg-[#0c0f1d] border border-white/5 flex flex-col items-center text-center relative z-10">
+                    <div class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center text-lg font-black mb-4 shadow-lg shadow-blue-500/25">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h4 class="font-extrabold text-white text-xs uppercase tracking-wider mb-2">3. Conversión</h4>
+                    <p class="text-[11px] text-slate-400 font-light leading-relaxed">
+                        Tu página web rápida y moderna responde todas las dudas y facilita la reserva o llamada al instante.
+                    </p>
+                </div>
+
+                <!-- Node 4: Action -->
+                <div class="p-6 rounded-2xl bg-[#0c0f1d]/80 border border-emerald-500/20 flex flex-col items-center text-center relative z-10 shadow-lg shadow-emerald-500/5">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center text-lg font-black mb-4 shadow-lg shadow-emerald-500/25">
+                        <i class="fa-solid fa-cash-register"></i>
+                    </div>
+                    <h4 class="font-extrabold text-emerald-400 text-xs uppercase tracking-wider mb-2">4. Resultado</h4>
+                    <p class="text-[11px] text-slate-400 font-light leading-relaxed">
+                        El cliente decide visitarte, reserva su mesa o solicita un presupuesto. Tu caja empieza a sonar.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Quién estará detrás de tu proyecto? -->
+    <section id="sobre-mi" class="py-20 relative bg-brand-card/10">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Big Photo Container (With your real uploaded photo integrated) -->
+                <div class="lg:col-span-5 reveal-element">
+                    <div class="relative aspect-[3/4] rounded-3xl bg-slate-900 border-8 border-white/5 shadow-2xl overflow-hidden flex flex-col justify-end p-6 group">
+                        
+                        <!-- Premium Photographic overlay guidelines/grid -->
+                        <div class="absolute inset-0 border border-white/10 m-6 rounded-2xl pointer-events-none z-20"></div>
+                        <div class="absolute top-1/2 left-6 right-6 h-px bg-white/5 pointer-events-none z-20"></div>
+                        <div class="absolute left-1/2 top-6 bottom-6 w-px bg-white/5 pointer-events-none z-20"></div>
+                        
+                        <!-- Ambient gradient backdrop -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-20"></div>
+                        
+                        <!-- Decorative camera details inside mockup -->
+                        <div class="absolute top-8 left-8 flex items-center gap-1.5 z-20">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+                            <span class="text-[9px] font-bold text-white tracking-widest">LIVE WORK</span>
+                        </div>
+                        
+                        <!-- Layer 0: Visual indicator showing its a placeholder (Sits in background) -->
+                        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-0">
+                            <i class="fa-solid fa-camera text-slate-800 text-[6rem] opacity-35 mb-4 group-hover:scale-105 transition-transform duration-500"></i>
+                            <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest max-w-[200px] leading-relaxed">Cargando fotografía de Hugo...</p>
+                        </div>
+
+                        <!-- Layer 1: Real Hugo Photo (Sits on top of the placeholder layout, rendering with z-10) -->
+                        <img src="hugo.jpeg.jpeg"
+     alt="Hugo - De Local a Viral"
+     class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-500 group-hover:scale-105">
+                        <div class="relative z-30">
+                            <h4 class="text-white font-extrabold text-sm uppercase tracking-wide">Hugo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Positive and High-Converting Narrative -->
+                <div class="lg:col-span-7 space-y-6 reveal-element">
+                    <span class="text-blue-500 font-bold uppercase tracking-widest text-xs block">Trato Cercano y Compromiso Real</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">¿Quién estará detrás de tu proyecto?</h2>
+                    
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+                        Hola, soy Hugo. Trabajo bajo una premisa muy sencilla: tu negocio merece una dedicación personalizada y cercana para destacar de verdad en internet.
+                    </p>
+                    
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+                        Al colaborar conmigo, tienes la total seguridad de que hablarás siempre directamente de tú a tú con la persona encargada de tu proyecto. Yo mismo me desplazaré a tu local para guionizar y capturar el contenido, diseñará tu página web y optimizaré tu presencia en los mapas de Google. 
+                    </p>
+                    
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+                        No hay intermediarios, ni demoras en las respuestas por WhatsApp. Ofrezco una implicación absoluta y constante para que sientas la tranquilidad de tener un aliado real enfocado en llenar tu local de clientes.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold uppercase tracking-widest text-slate-400 pt-2">
+                        <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-neon"></i> Comunicación directa conmigo</div>
+                        <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-neon"></i> Desplazamiento real a tu negocio</div>
+                        <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-neon"></i> Proyectos de alta dedicación</div>
+                        <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-brand-neon"></i> Sin cuotas ni costes ocultos</div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#contacto" class="inline-flex px-6 h-12 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-500 text-white transition-all items-center gap-2">
+                            <span>Quiero hablar contigo</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section (Resultados BuscaBolas) -->
+    <section id="caso-exito" class="py-20 border-t border-b border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                <span class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-2 block">El Poder de los Resultados</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Esto ya ha funcionado con BuscaBolas</h2>
+                <p class="mt-3 text-slate-400 font-light text-sm sm:text-base">
+                    No muestro ideas abstractas. Este es el impacto real conseguido en **BuscaBolas**, aplicando mi metodología de visibilidad orgánica y conversión directa.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Big Stat Card -->
+                <div class="lg:col-span-5 reveal-element">
+                    <div class="relative rounded-2xl p-8 bg-[#0b0e22] border border-blue-500/20 shadow-2xl shadow-blue-500/5 overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl"></div>
+                        
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 rounded-xl bg-white p-0.5 flex items-center justify-center overflow-hidden shrink-0">
+                                <img src="Logo BuscaBolas.jpg" alt="Logo de BuscaBolas" class="w-full h-full object-contain scale-[1.35]" onerror="handleBuscaBolasError(this)">
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-white text-lg">BuscaBolas</h4>
+                                <span class="text-xs text-blue-400 font-semibold tracking-wider uppercase">Crecimiento Digital Integral</span>
+                            </div>
+                        </div>
+
+                        <!-- Core Requested Bullet Points (Aumentado a los 6 hitos clave) -->
+                        <div class="py-6 border-y border-white/5 my-5 space-y-3.5">
+                            <div class="flex items-start gap-2.5 text-sm">
+                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1 shrink-0"></i>
+                                <span class="text-slate-200">Más de <strong class="text-white font-bold">70.000 seguidores</strong> locales.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5 text-sm">
+                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1 shrink-0"></i>
+                                <span class="text-slate-200">Más de <strong class="text-white font-bold">30 millones</strong> de visualizaciones en redes.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5 text-sm">
+                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1 shrink-0"></i>
+                                <span class="text-slate-200">Más de <strong class="text-white font-bold">15.000 visitas</strong> a la web de reservas.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5 text-sm">
+                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1 shrink-0"></i>
+                                <span class="text-slate-200">Más de <strong class="text-white font-bold">100 pedidos</strong> conseguidos directamente.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5 text-sm">
+                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1 shrink-0"></i>
+                                <span class="text-slate-200">Diseño completo y ágil de <span class="text-brand-neon font-bold">BuscaBolas.com</span>.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5 text-sm">
+                                <i class="fa-solid fa-circle-check text-emerald-400 mt-1 shrink-0"></i>
+                                <span class="text-slate-200">Estrategia completa de calendarios de contenido.</span>
+                            </div>
+                        </div>
+
+                        <!-- Info Web link -->
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-slate-400 flex items-center gap-2"><i class="fa-solid fa-globe text-blue-400"></i> Diseño Web Oficial</span>
+                            <a href="https://buscabolas.com" target="_blank" class="font-bold text-blue-400 hover:underline">BuscaBolas.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Explanatory Web & Social Media Strategy -->
+                <div class="lg:col-span-7 flex flex-col justify-center reveal-element">
+                    <span class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-2 block">El Secreto de la Conversión</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-white leading-tight">
+                        No se trata solo de publicar vídeos; se trata de guiarles a tu local
+                    </h3>
+                    
+                    <p class="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+                        El error común es tener perfiles de redes sueltos por un lado y una web estática por el otro. Para <span class="text-white font-bold">BuscaBolas</span> diseñamos una estructura coordinada: creamos vídeos que despiertan el interés, y la página web canaliza ese tráfico directamente hacia los pedidos del servicio.
+                    </p>
+                    
+                    <p class="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed font-light">
+                        Aplicando este mismo método en tu negocio local, nos aseguramos de que cada vecino que se cruce con tu marca sepa exactamente dónde estás, qué ofreces y cómo reservar hoy mismo.
+                    </p>
+
+                    <div class="mt-6">
+                        <a href="#contacto" class="inline-flex px-6 h-12 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-500 text-white transition-all items-center gap-2">
+                            <span>Quiero conseguir un impacto real en mi local</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Grid (¿Cómo se ve el trabajo?) -->
+    <section id="portfolio" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="mb-12 reveal-element">
+                <span class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-2 block">Demos en vivo</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">¿Cómo luce el resultado final?</h2>
+                <p class="mt-2 text-slate-400 font-light text-sm max-w-xl">
+                    Conoce de cerca el diseño web limpio y la retención del vídeo vertical del caso BuscaBolas:
+                </p>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="portfolio-grid">
+                
+                <!-- Item 1: Interactive Video Card (Using actual video file) -->
+                <div class="portfolio-item premium-card rounded-2xl overflow-hidden reveal-element group cursor-pointer" data-category="videos" id="portfolio-video-trigger">
+                    <div class="relative h-96 bg-slate-900 flex items-center justify-center overflow-hidden">
+                        
+                        <!-- Static Video Cover Layout -->
+                        <div id="portfolio-video-cover" class="absolute inset-0 w-full h-full flex items-center justify-center transition-all duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent z-10"></div>
+                            
+                            <!-- Custom SVG Visual Design -->
+                            <svg class="absolute inset-0 w-full h-full object-cover opacity-40" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="500" fill="#080c1e"/>
+                                <circle cx="200" cy="200" r="100" fill="#1d4ed8" opacity="0.15"/>
+                                <path d="M140 180H260V320C260 335 245 350 230 350H170C155 350 140 335 140 320V180Z" fill="#1e293b" opacity="0.7"/>
+                                <circle cx="200" cy="260" r="30" fill="#3b82f6" opacity="0.9"/>
+                            </svg>
+                            
+                            <!-- Pulse Play Icon -->
+                            <div class="relative z-20 w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-white text-xl shadow-lg shadow-blue-500/50 group-hover:scale-110 transition-all duration-300">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                            
+                            <!-- Badge Label -->
+                            <span class="absolute top-4 right-4 z-20 px-2.5 py-1 rounded bg-black/75 text-[10px] font-bold tracking-wider text-white">VER VIDEO DE DEMOSTRACIÓN</span>
+                        </div>
+
+                        <!-- Video Element -->
+                        <video 
+  id="portfolio-video-player" 
+  class="absolute inset-0 w-full h-full object-cover z-20" 
+  src="Video Portfolio.mp4" 
+  controls 
+  preload="metadata">
+</video>
+                    </div>
+                    <div class="p-6 relative z-20">
+                        <span class="text-xs text-blue-400 font-bold uppercase tracking-wider">BuscaBolas: Edición de Video</span>
+                        <h3 class="text-base font-bold text-white mt-1">Estructura de Retención de Audiencia</h3>
+                        <p class="text-slate-400 text-xs font-light mt-1">Vídeo real grabado y editado con cortes dinámicos, subtítulos en pantalla y música de tendencia para retener visitas. ¡Haz clic arriba para reproducir!</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Web Design Representation (Mockup showcasing BuscaBolas.com) -->
+                <a href="https://buscabolas.com" target="_blank" class="portfolio-item premium-card rounded-2xl overflow-hidden reveal-element cursor-pointer block" data-category="web" id="portfolio-web-trigger">
+                    <div class="h-96 bg-[#0a0d1a] border-b border-white/5 relative overflow-hidden flex flex-col justify-between p-8">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent"></div>
+                        <div class="flex justify-between items-center z-10">
+                            <span class="text-xs font-bold text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-full"><i class="fa-solid fa-globe mr-1.5"></i> PROYECTO WEB ACTIVO</span>
+                            <span class="text-slate-500 text-xs">Visitar Web <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[9px]"></i></span>
+                        </div>
+
+                        <div class="my-auto z-10 flex flex-col items-center">
+                            <!-- Visual placeholder representing BuscaBolas website template UI -->
+                            <div class="w-full max-w-[200px] bg-slate-900 border border-white/10 rounded-lg shadow-2xl p-3 transform group-hover:scale-105 transition-all">
+                                <div class="flex items-center gap-1 border-b border-white/5 pb-2 mb-2">
+                                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                                    <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+                                    <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                                </div>
+                                <div class="h-3 w-16 bg-blue-500/20 rounded mb-1.5"></div>
+                                <div class="h-1.5 w-full bg-slate-800 rounded mb-1"></div>
+                                <div class="h-1.5 w-12 bg-slate-800 rounded mb-3"></div>
+                                <div class="h-16 w-full bg-gradient-to-tr from-blue-600/20 to-indigo-600/20 rounded flex items-center justify-center text-[10px] text-blue-400 font-extrabold tracking-tighter">
+                                    BUSCABOLAS.COM
+                                </div>
+                            </div>
+                        </div>
+                        <span class="text-[9px] text-slate-500 uppercase tracking-widest block font-bold z-10">Foco en Reservas y Contacto</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-blue-400 font-bold uppercase tracking-wider">Diseño a Medida</span>
+                        <h3 class="text-base font-bold text-white mt-1">BuscaBolas.com: Página Web Oficial</h3>
+                        <p class="text-slate-400 text-xs font-light mt-1">Plataforma web ágil, rápida en móviles y estructurada con un embudo directo de contacto para cerrar las visitas del público local.</p>
+                    </div>
+                </a>
+
+                <!-- Item 3: Stats -->
+                <div class="portfolio-item premium-card rounded-2xl overflow-hidden reveal-element" data-category="stats">
+                    <div class="h-96 bg-[#0a0d1a] p-8 flex flex-col justify-between border-b border-white/5 relative overflow-hidden">
+                        <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl"></div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full"><i class="fa-solid fa-arrow-up mr-1"></i> Tráfico Orgánico Local</span>
+                            <span class="text-slate-500 text-xs">Crecimiento Total</span>
+                        </div>
+
+                        <!-- Mini Mockup of stats growth curve -->
+                        <div class="my-auto space-y-4">
+                            <div class="text-slate-400 text-xs font-semibold">Comunidad BuscaBolas</div>
+                            <div class="text-4xl font-black text-white">+70.000</div>
+                            
+                            <!-- Custom SVG Line Graph representing BuscaBolas scale -->
+                            <svg class="w-full h-24 text-emerald-500" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 90Q40 85 80 75T160 50T240 25T300 5" stroke="#10b981" stroke-width="3" fill="none"/>
+                                <path d="M0 90Q40 85 80 75T160 50T240 25T300 5L300 100L0 100Z" fill="url(#grad)" opacity="0.1"/>
+                                <defs>
+                                    <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#10b981"/>
+                                        <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-emerald-400 font-bold uppercase tracking-wider">Métricas Reales</span>
+                        <h3 class="text-base font-bold text-white mt-1">Planificación y Alcance Continuo</h3>
+                        <p class="text-slate-400 text-xs font-light mt-1">Escalado progresivo del alcance y visitas del negocio aplicando guiones con gancho y una línea de diseño limpio constante.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Así trabajaremos juntos (Proceso estilo Apple) -->
+    <section id="como-trabajamos" class="py-20 bg-brand-card/25 border-t border-b border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                <span class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-2 block">Cero complicaciones</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Así trabajaremos juntos</h2>
+                <p class="mt-3 text-slate-400 font-light text-sm sm:text-base">
+                    Me encargo of todo el proceso para que no pierdas tiempo en tu día a día. Cuatro pasos sencillos para empezar a atraer clientes:
+                </p>
+            </div>
+
+            <!-- Apple-Style Step Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Step 1 -->
+                <div class="premium-card p-6 rounded-2xl reveal-element flex flex-col justify-between items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-regular fa-comment-dots"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base mb-1">1. Hablamos</h4>
+                        <p class="text-xs text-slate-400 font-light leading-relaxed">Conozco los puntos fuertes de tu local sin compromisos.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="premium-card p-6 rounded-2xl reveal-element flex flex-col justify-between items-center text-center" style="transition-delay: 0.1s">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-map-pin"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base mb-1">2. Diseñamos un plan</h4>
+                        <p class="text-xs text-slate-400 font-light leading-relaxed">Defino un plan personalizado para tus necesidades reales.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="premium-card p-6 rounded-2xl reveal-element flex flex-col justify-between items-center text-center" style="transition-delay: 0.2s">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base mb-1">3. Creamos el contenido</h4>
+                        <p class="text-xs text-slate-400 font-light leading-relaxed">Grabo en tu local, tomo fotos o diseño tu web.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="premium-card p-6 rounded-2xl reveal-element flex flex-col justify-between items-center text-center" style="transition-delay: 0.3s">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4 animate-pulse">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base mb-1">4. Empiezas a destacar</h4>
+                        <p class="text-xs text-slate-400 font-light leading-relaxed">Tu presencia digital empieza a traer clientes de la zona.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: ¿Qué pasa si no haces nada? (Aversión a la pérdida) -->
+    <section class="py-20 border-b border-white/5 relative overflow-hidden bg-gradient-to-b from-brand-dark to-[#080a13]">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            
+            <div class="text-center mb-16 reveal-element">
+                <span class="text-rose-500 font-bold uppercase tracking-widest text-xs mb-2 block"><i class="fa-solid fa-triangle-exclamation mr-1.5 animate-pulse"></i> El coste de la inacción</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">¿Qué pasa si decides no hacer nada?</h2>
+                <p class="mt-3 text-slate-400 font-light text-sm sm:text-base max-w-xl mx-auto">
+                    El tiempo corre. Posponer tu digitalización no congela el mercado; le da una ventaja directa a tus competidores locales.
+                </p>
+            </div>
+
+            <!-- Danger List Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal-element">
+                
+                <div class="p-6 rounded-2xl bg-white/[0.01] border border-white/5 hover:border-rose-500/20 transition-all flex gap-4">
+                    <div class="text-rose-500 text-lg mt-1 shrink-0"><i class="fa-solid fa-user-minus"></i></div>
+                    <div>
+                        <h4 class="font-extrabold text-white text-sm uppercase tracking-wider mb-1">Tu competencia sigue creciendo</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">Mientras tu local permanece invisible, otros negocios de tu barrio se posicionan y se quedan con los clientes de tu zona.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white/[0.01] border border-white/5 hover:border-rose-500/20 transition-all flex gap-4" style="transition-delay: 0.1s">
+                    <div class="text-rose-500 text-lg mt-1 shrink-0"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <div>
+                        <h4 class="font-extrabold text-white text-sm uppercase tracking-wider mb-1">Invisibilidad en el mapa</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">Cuando los vecinos busquen tu sector en Google Maps, elegirán al primero que aparezca con buenas valoraciones. No a ti.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white/[0.01] border border-white/5 hover:border-rose-500/20 transition-all flex gap-4" style="transition-delay: 0.2s">
+                    <div class="text-rose-500 text-lg mt-1 shrink-0"><i class="fa-solid fa-phone-slash"></i></div>
+                    <div>
+                        <h4 class="font-extrabold text-white text-sm uppercase tracking-wider mb-1">Pérdida de reservas rápidas</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">No tener una web adaptada a móviles frustra al usuario. Si no pueden ver tu carta o reservar en 10 segundos, se irán.</p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white/[0.01] border border-white/5 hover:border-rose-500/20 transition-all flex gap-4" style="transition-delay: 0.3s">
+                    <div class="text-rose-500 text-lg mt-1 shrink-0"><i class="fa-solid fa-heart-crack"></i></div>
+                    <div>
+                        <h4 class="font-extrabold text-white text-sm uppercase tracking-wider mb-1">Sin conexión real</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">Dejar tus perfiles sociales inactivos transmite sensación de abandono. Tu marca deja de ser recordada por tu comunidad.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center reveal-element">
+                <a href="#contacto" class="inline-flex px-8 h-14 rounded-xl font-bold bg-blue-600 hover:bg-blue-500 text-white transition-all items-center justify-center gap-2 shadow-xl shadow-blue-600/30 hover:-translate-y-1 active:translate-y-0">
+                    <span>Quiero empezar hoy</span>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Testimonios / Casos en Proceso (Preparada para el futuro de forma elegante y confiable) -->
+    <section class="py-20 bg-brand-card/10 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            
+            <div class="mb-12 reveal-element">
+                <span class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-2 block">Casos en proceso</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Lo que opinan los empresarios</h2>
+                <p class="mt-3 text-slate-400 font-light text-sm sm:text-base max-w-2xl mx-auto">
+                    Muy pronto compartiremos de forma abierta las historias reales de transformación digital y valoraciones directas de los negocios locales con los que ya estamos diseñando nuevas estrategias. Tu negocio podría ser la próxima gran reseña destacada aquí.
+                </p>
+            </div>
+
+            <!-- Elegant Empty State Placeholder (CRO Focus) -->
+            <div class="p-8 md:p-12 rounded-3xl bg-[#0c0f1d] border border-blue-500/10 max-w-2xl mx-auto relative overflow-hidden reveal-element">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl"></div>
+                <div class="flex justify-center mb-6">
+                    <div class="inline-flex items-center gap-1.5 text-amber-400 text-xl">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <h4 class="font-extrabold text-white text-base mb-2">Construyendo los próximos casos de éxito de barrio</h4>
+                <p class="text-xs text-slate-400 leading-relaxed font-light">
+                    Trabajo con un volumen controlado de locales para asegurar la máxima calidad y resultados antes de publicar nuevas reseñas. Si quieres que tu establecimiento multiplique su visibilidad, hablemos hoy mismo.
+                </p>
+                <div class="mt-6">
+                    <a href="#contacto" class="inline-flex px-6 h-11 rounded-xl text-xs font-bold bg-blue-600/10 hover:bg-blue-600 border border-blue-500/20 text-blue-400 hover:text-white transition-all items-center gap-2">
+                        <span>Ser el siguiente caso de éxito</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section (¿Qué tengo que hacer ahora?) -->
+    <section id="contacto" class="py-20 bg-brand-dark border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-5 reveal-element">
+                    <span class="text-blue-500 font-bold uppercase tracking-widest text-xs mb-2 block">Demos el paso</span>
+                    
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+                        ¿Hablamos sobre cómo atraer más clientes a tu local?
+                    </h2>
+                    <p class="mt-4 text-slate-400 text-sm sm:text-base leading-relaxed font-light">
+                        No sigas perdiendo clientes que hoy mismo te están buscando en tu barrio. Cuéntame de forma cercana qué tipo de negocio tienes y diseñaremos una propuesta a tu medida sin ningún compromiso.
+                    </p>
+
+                    <!-- Fast Direct Contact options -->
+                    <div class="mt-8 space-y-3">
+                        <a href="https://wa.me/34722540234?text=Hola!%20He%20visto%20tu%20web%20De%20Local%20a%20Viral.%20Me%20gustar%C3%ADa%20saber%20qu%C3%A9%20podr%C3%ADamos%20hacer%20con%20mi%20negocio." target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white/[0.01] border border-white/5 hover:border-blue-500/20 hover:bg-blue-500/5 transition-all group">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-lg group-hover:scale-105 transition-transform">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-xs uppercase tracking-wider">Hablemos por WhatsApp</h4>
+                                <p class="text-[11px] text-slate-500 mt-0.5">+34 722 540 234</p>
+                            </div>
+                        </a>
+
+                        <a href="https://instagram.com/delocalaviral" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-white/[0.01] border border-white/5 hover:border-blue-500/20 hover:bg-blue-500/5 transition-all group">
+                            <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400 text-lg group-hover:scale-105 transition-transform">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-xs uppercase tracking-wider">Escríbeme por Instagram</h4>
+                                <p class="text-[11px] text-slate-500 mt-0.5">@delocalaviral</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Form Box (Optimizado con campos de segmentación avanzados) -->
+                <div class="lg:col-span-7 reveal-element">
+                    <div class="p-6 md:p-8 rounded-2xl bg-[#0c0f1d] border border-blue-500/20 shadow-2xl relative">
+                        <div class="absolute -top-10 -left-10 w-32 h-32 bg-blue-600/15 rounded-full blur-3xl"></div>
+                        
+                        <!-- Form notification box -->
+                        <div id="form-msg" class="hidden mb-6 p-4 rounded-xl text-sm font-semibold"></div>
+
+                        <!-- Header Form CRO Text -->
+                        <div class="mb-6 border-b border-white/5 pb-4">
+                            <p class="text-sm font-bold text-white leading-snug">Cuéntame cómo es tu negocio y prepararé una propuesta personalizada sin ningún compromiso.</p>
+                            <p class="text-xs text-slate-400 mt-1">Responderé de forma directa y personal.</p>
+                        </div>
+
+                        <!-- Formspree Integration -->
+                        <form id="contact-form" action="https://formspree.io/f/xkolrokk" method="POST" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="nombre" class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Tu nombre</label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Javier" required class="w-full h-11 px-4 rounded-lg bg-slate-900 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-all text-xs">
+                                </div>
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="empresa" class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Nombre de tu local</label>
+                                    <input type="text" id="empresa" name="empresa" placeholder="Ej. Cafetería Central" required class="w-full h-11 px-4 rounded-lg bg-slate-900 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-all text-xs">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="telefono" class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Tu Teléfono (WhatsApp)</label>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. 600 000 000" required class="w-full h-11 px-4 rounded-lg bg-slate-900 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-all text-xs">
+                                </div>
+                                <div class="flex flex-col gap-1.5">
+                                    <label for="email" class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Correo electrónico</label>
+                                    <input type="email" id="email" name="email" placeholder="javier@ejemplo.com" required class="w-full h-11 px-4 rounded-lg bg-slate-900 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-all text-xs">
+                                </div>
+                            </div>
+
+                            <!-- ¿Qué necesitas? (Opciones CRO - Fotografía Removida) -->
+                            <div class="flex flex-col gap-2">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-bold">¿Qué solución necesitas potenciar hoy?</span>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                    <label class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-900 border border-white/5 cursor-pointer text-xs select-none hover:border-blue-500/25">
+                                        <input type="radio" name="necesidad" value="Redes Sociales" id="radio-redes" class="text-blue-600 bg-slate-900 border-white/10 focus:ring-0">
+                                        <span class="text-slate-300 text-[10px] sm:text-xs">Redes Sociales</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-900 border border-white/5 cursor-pointer text-xs select-none hover:border-blue-500/25">
+                                        <input type="radio" name="necesidad" value="Página Web" id="radio-web" class="text-blue-600 bg-slate-900 border-white/10 focus:ring-0">
+                                        <span class="text-slate-300 text-[10px] sm:text-xs">Página Web</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-900 border border-white/5 cursor-pointer text-xs select-none hover:border-blue-500/25">
+                                        <input type="radio" name="necesidad" value="Google Business" id="radio-google" class="text-blue-600 bg-slate-900 border-white/10 focus:ring-0">
+                                        <span class="text-slate-300 text-[10px] sm:text-xs">Google Maps</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-900 border border-white/5 cursor-pointer text-xs select-none hover:border-blue-500/25">
+                                        <input type="radio" name="necesidad" value="Estrategia Digital" id="radio-strat" class="text-blue-600 bg-slate-900 border-white/10 focus:ring-0">
+                                        <span class="text-slate-300 text-[10px] sm:text-xs">Estrategia</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-900 border border-white/5 cursor-pointer text-xs select-none hover:border-blue-500/25 col-span-2">
+                                        <input type="radio" name="necesidad" value="Presencia Completa" checked class="text-blue-600 bg-slate-900 border-white/10 focus:ring-0">
+                                        <span class="text-slate-300 text-[10px] sm:text-xs">No lo tengo claro / Todo</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- ¿Cómo nos has conocido? -->
+                            <div class="flex flex-col gap-1.5">
+                                <label for="origen" class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-bold">¿Cómo nos has conocido?</label>
+                                <select id="origen" name="origen" required class="w-full h-11 px-3 rounded-lg bg-slate-900 border border-white/10 text-slate-300 focus:outline-none focus:border-blue-500 text-xs">
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="TikTok">TikTok</option>
+                                    <option value="Google">Google / Buscador</option>
+                                    <option value="Recomendación">Recomendación de un amigo</option>
+                                    <option value="Otro">Otro canal</option>
+                                </select>
+                            </div>
+
+                            <div class="flex flex-col gap-1.5">
+                                <label for="mensaje" class="text-[10px] font-bold uppercase tracking-wider text-slate-400 font-bold">Cuéntame brevemente sobre tu negocio</label>
+                                <textarea id="mensaje" name="mensaje" rows="3" placeholder="Ej. Tengo un restaurante de comida casera en Sevilla y quiero atraer más reservas de vecinos el fin de semana." required class="w-full p-4 rounded-lg bg-slate-900 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 text-xs resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full h-12 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5 active:translate-y-0 text-xs uppercase tracking-wider">
+                                <span>Solicitar mi propuesta de crecimiento</span>
+                                <i class="fa-solid fa-rocket text-xs"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-brand-dark pt-16 pb-8 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/5">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-2">
+                    <a href="#" class="flex items-center gap-3 group mb-4">
+                        <img src="Logo.png" alt="De Local a Viral Logo" class="w-10 h-10 object-contain rounded-xl shadow-lg shadow-blue-500/20" onerror="this.onerror=null; this.outerHTML='<div class=\'w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center font-extrabold text-white text-sm shadow-lg shadow-blue-500/20 shrink-0\'><i class=\'fa-solid fa-play text-[10px] mr-0.5\'></i>D</div>';">
+                        <div class="flex flex-col">
+                            <span class="font-extrabold text-white tracking-wide text-base leading-none">DE LOCAL <span class="text-blue-500">A VIRAL</span></span>
+                            <span class="text-[9px] text-slate-400 tracking-widest mt-1 font-semibold text-left">ESTUDIO DE CRECIMIENTO LOCAL</span>
+                        </div>
+                    </a>
+                    <p class="text-slate-400 text-xs sm:text-sm font-light max-w-sm leading-relaxed mb-6">
+                        Todo lo que necesita un negocio local para destacar y atraer visitas físicas de forma coordinada, honesta y 100% personalizada.
+                    </p>
+                    <!-- Social icons footer -->
+                    <div class="flex items-center gap-4">
+                        <a href="https://instagram.com/delocalaviral" target="_blank" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-blue-500 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@de.local.a.viral" target="_blank" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-blue-500 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://wa.me/34722540234" target="_blank" class="w-9 h-9 rounded-lg bg-white/5 hover:bg-blue-500 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white text-xs tracking-wider uppercase mb-4">Estructura</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#inicio" class="text-slate-400 hover:text-blue-400 transition-colors font-light">Inicio</a></li>
+                        <li><a href="#servicios" class="text-slate-400 hover:text-blue-400 transition-colors font-light">Servicios</a></li>
+                        <li><a href="#todo-conectado" class="text-slate-400 hover:text-blue-400 transition-colors font-light">Cómo funciona</a></li>
+                        <li><a href="#sobre-mi" class="text-slate-400 hover:text-blue-400 transition-colors font-light">Por qué yo</a></li>
+                        <li><a href="#caso-exito" class="text-slate-400 hover:text-blue-400 transition-colors font-light">Caso de Éxito</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Footer details -->
+                <div>
+                    <h4 class="font-bold text-white text-xs tracking-wider uppercase mb-4">Contacto Directo</h4>
+                    <ul class="space-y-2.5 text-xs font-light">
+                        <li class="flex items-center gap-2.5 text-slate-400">
+                            <i class="fa-solid fa-phone text-blue-400 text-[10px]"></i>
+                            <span>+34 722 540 234</span>
+                        </li>
+                        <li class="flex items-center gap-2.5 text-slate-400">
+                            <i class="fa-solid fa-envelope text-blue-400 text-[10px]"></i>
+                            <span>delocalaviral@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-2.5 text-slate-400">
+                            <i class="fa-solid fa-location-dot text-blue-400 text-[10px]"></i>
+                            <span>Sevilla, España (Aliado Local)</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Custom, high-converting ending quote (Signature Slogan updated to the selected official brand mantra) -->
+            <div class="mt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-[10px] text-slate-500 font-light">
+                    &copy; 2026 De Local a Viral. Todos los derechos reservados.
+                </p>
+                <div class="text-center md:text-right max-w-xl">
+                    <p class="text-xs sm:text-sm font-semibold italic bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">
+                        "No diseñamos contenido para alimentar algoritmos con visitas pasajeras. Construimos la estructura perfecta para llenar tu negocio de clientes reales."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic & Animations Javascript -->
+    <script>
+        // 1. Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hLine1 = document.getElementById('hamburger-line1');
+        const hLine2 = document.getElementById('hamburger-line2');
+        const hLine3 = document.getElementById('hamburger-line3');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            hLine1.classList.toggle('rotate-45');
+            hLine1.classList.toggle('translate-y-2');
+            hLine2.classList.toggle('opacity-0');
+            hLine3.classList.toggle('-rotate-45');
+            hLine3.classList.toggle('-translate-y-2');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // 2. Interactive FAQ Accordion Logic
+        const faqButtons = document.querySelectorAll('.faq-btn');
+        faqButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('.fa-chevron-down');
+                
+                // Toggle current FAQ
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    // Close other FAQs first
+                    faqButtons.forEach(otherBtn => {
+                        const otherContent = otherBtn.nextElementSibling;
+                        const otherIcon = otherBtn.querySelector('.fa-chevron-down');
+                        otherContent.style.maxHeight = null;
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    });
+                    
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // 3. Interactive Video Player Inside Portfolio
+        const videoTrigger = document.getElementById('portfolio-video-trigger');
+        const videoCover = document.getElementById('portfolio-video-cover');
+        const videoPlayer = document.getElementById('portfolio-video-player');
+
+        if (videoTrigger && videoCover && videoPlayer) {
+            videoTrigger.addEventListener('click', () => {
+                // Hide cover and show video player
+                videoCover.classList.add('hidden');
+                videoPlayer.classList.remove('hidden');
+                // Play video automatically
+                videoPlayer.play();
+            });
+        }
+
+        // 4. PRE-SELECCIÓN INTERACTIVA DE SERVICIOS EN EL FORMULARIO (CRO de Alta Gama)
+        function selectService(serviceValue) {
+            // Desplazamiento suave al formulario de contacto
+            document.getElementById('contacto').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Mapeo e inyección del estado del radio button
+            let radioId = 'radio-redes'; // Por defecto
+            if (serviceValue === 'Página Web') radioId = 'radio-web';
+            if (serviceValue === 'Google Business') radioId = 'radio-google';
+            if (serviceValue === 'Estrategia Digital') radioId = 'radio-strat';
+
+            const targetRadio = document.getElementById(radioId);
+            if (targetRadio) {
+                targetRadio.checked = true;
+            }
+        }
+
+        // 5. Form Submission & Validation Logic
+        const contactForm = document.getElementById('contact-form');
+        const formMsg = document.getElementById('form-msg');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form fields values
+            const name = document.getElementById('nombre').value.trim();
+            const company = document.getElementById('empresa').value.trim();
+            const phone = document.getElementById('telefono').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('mensaje').value.trim();
+
+            if (name === "" || company === "" || phone === "" || email === "" || message === "") {
+                formMsg.textContent = "Por favor, completa todos los campos del formulario.";
+                formMsg.className = "mb-6 p-4 rounded-xl text-sm font-semibold bg-rose-500/10 border border-rose-500/20 text-rose-400 block";
+                return;
+            }
+
+            // Simulate loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin mr-2"></i> Procesando tu propuesta...';
+
+            // Prepare Formspree payload
+            const formData = new FormData(contactForm);
+
+            // Send via AJAX to Formspree
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success response message
+                    formMsg.textContent = "¡Propuesta recibida! Tu mensaje ha sido enviado correctamente a delocalaviral@gmail.com. Me pondré en contacto contigo de forma personal por WhatsApp o correo en menos de 24 horas.";
+                    formMsg.className = "mb-6 p-4 rounded-xl text-sm font-semibold bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 block";
+                    contactForm.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            formMsg.textContent = data.errors.map(error => error.message).join(", ");
+                        } else {
+                            formMsg.textContent = "Oops! Ocurrió un error al enviar el formulario. Por favor, vuelve a intentarlo.";
+                        }
+                        formMsg.className = "mb-6 p-4 rounded-xl text-sm font-semibold bg-rose-500/10 border border-rose-500/20 text-rose-400 block";
+                    });
+                }
+            })
+            .catch(error => {
+                formMsg.textContent = "Oops! Hubo un problema de conexión al enviar tu formulario.";
+                formMsg.className = "mb-6 p-4 rounded-xl text-sm font-semibold bg-rose-500/10 border border-rose-500/20 text-rose-400 block";
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                // Scroll slowly to message
+                formMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+
+        // 6. Scroll Reveal Intersection Observer Logic
+        const revealElements = document.querySelectorAll('.reveal-element');
+
+        const revealOnScrollObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(element => {
+            revealOnScrollObserver.observe(element);
+        });
+
+        // Initial setup for loaded elements in view right away
+        window.addEventListener('load', () => {
+            revealElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
